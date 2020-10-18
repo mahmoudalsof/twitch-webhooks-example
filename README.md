@@ -9,6 +9,12 @@
 ## Enviroment Variables
 
 All enviroment variables required are listed in the .env.example file as well as in the below table
+| Variable Name           | Description                                                                       |
+| ----------------------- | --------------------------------------------------------------------------------- |
+| TWITCH_OAUTH            | This is your Twitch OAUTH token                                                   |
+| TWITCH_CLIENT_ID        | Your Twitch Client ID that is linked with the above token                         |
+| PORT_NUMBER             | This is your port number that your callback url and express server will listen on |
+| TWITCH_API_CALLBACK_URL | The url that will listen for subscribed webhook notifications (more info below)   |
 
 ## Dependencies
 
@@ -17,12 +23,7 @@ All enviroment variables required are listed in the .env.example file as well as
 - Dotenv
 - ngrok (more on this below)
 
-| Variable Name           | Description                                                                       |
-| ----------------------- | --------------------------------------------------------------------------------- |
-| TWITCH_OAUTH            | This is your Twitch OAUTH token                                                   |
-| TWITCH_CLIENT_ID        | Your Twitch Client ID that is linked with the above token                         |
-| PORT_NUMBER             | This is your port number that your callback url and express server will listen on |
-| TWITCH_API_CALLBACK_URL | The url that will listen for subscribed webhook notifications (more info below)   |
+
 
 ## Basic Workflow
 

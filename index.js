@@ -10,14 +10,10 @@ const PORT_NUMBER = process.env.PORT_NUMBER;
 
 //Set up the endpoints 
 
-
-
 //Whenever twitch sends a notification to your subscribed webhook topic
 //it will send it to this endpoint. You have to send back a 200
 //otherwise twitch will think you did not recieve the notification and spam you
 app.post("/", (req, res) => {
-
-    
 
     console.log("Notification recieved");
     console.log(req.body);
@@ -50,8 +46,6 @@ async function registerWebhook(topicURL) {
         "hub.lease_seconds": 84600
     }
 
-
-
     const headers = {
         Authorization: `Bearer ${process.env.TWITCH_OAUTH}`,
         "Client-Id": process.env.TWITCH_CLIENT_ID,
@@ -65,14 +59,12 @@ async function registerWebhook(topicURL) {
         })
         console.log(response.data)
 
-
     } catch (err) {
         console.error(err);
-        
     }
 }
 
 app.listen(PORT_NUMBER);
-
 //Example: Subscribe to new followers to a twitch user with id: 501793804
 registerWebhook("https://api.twitch.tv/helix/users/follows?first=1&to_id=501793804")
+
